@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f6f1;
+  --foreground: #263229;
+  --muted: #798077;
+  --line: #e7e5de;
+  --green: #315d47;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Geist", "Avenir Next", Avenir, ui-sans-serif, system-ui, sans-serif;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: "Avenir Next", Avenir, ui-sans-serif, system-ui, sans-serif; }
+button, input, textarea, select { font: inherit; }
+::selection { background: #dbe9db; color: #203f2f; }
+
+.subtle-grid {
+  background-image: radial-gradient(#d9dfd5 0.7px, transparent 0.7px);
+  background-size: 17px 17px;
+}
+
+.scrollbar-thin { scrollbar-width: thin; scrollbar-color: #c9cec5 transparent; }
+.scrollbar-thin::-webkit-scrollbar { width: 7px; height: 7px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #c9cec5; border-radius: 999px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
